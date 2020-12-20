@@ -170,8 +170,8 @@ body {
 }
 
 .container .skills .circle {
-  width: 170px;
-  height: 170px;
+  width: 100px;
+  height: 100px;
   position: absolute;
   left: -270px;
 }
@@ -180,37 +180,114 @@ body {
   width: 100%;
   height: 600px;
   background-color: #fdfdff;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.container .projects .previous.navigator {
+  position: absolute;
+  z-index: 5;
+  width: 100px;
+  top: 50%;
+  cursor: pointer;
+  height: 100px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 5px #ccc;
+          box-shadow: 0 0 5px #ccc;
+  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  left: 70px;
+  font-size: small;
 }
 
-.container .projects h3 {
-  font-size: large;
+.container .projects .previous.navigator img {
+  width: 20px;
+  height: 20px;
+}
+
+.container .projects .next.navigator {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  right: 70px;
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 5px #ccc;
+          box-shadow: 0 0 5px #ccc;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: small;
+}
+
+.container .projects .next.navigator img {
+  width: 20px;
+  height: 20px;
+}
+
+.container .projects #project_name {
+  font-size: x-large;
+  position: relative;
+  top: 250px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: top 500ms ease-in;
+  transition: top 500ms ease-in;
+}
+
+.container .projects #project_name1 {
+  font-size: x-large;
+  position: relative;
+  top: 300px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: top 500ms ease-in 200ms;
+  transition: top 500ms ease-in 200ms;
 }
 
 .container .projects .project {
   width: 500px;
   height: 400px;
+  margin-left: 100px;
   background-color: dodgerblue;
   border-radius: 7px;
   cursor: pointer;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   -webkit-transform: rotate3d(0, 0, 0, 0);
           transform: rotate3d(0, 0, 0, 0);
   -webkit-box-shadow: 5px 5px 20px #aaa;
           box-shadow: 5px 5px 20px #aaa;
-  -webkit-transition: -webkit-transform 500ms ease;
-  transition: -webkit-transform 500ms ease;
-  transition: transform 500ms ease;
-  transition: transform 500ms ease, -webkit-transform 500ms ease;
+  -webkit-transition: top 500ms ease-in 300ms, -webkit-transform 500ms ease;
+  transition: top 500ms ease-in 300ms, -webkit-transform 500ms ease;
+  transition: transform 500ms ease, top 500ms ease-in 300ms;
+  transition: transform 500ms ease, top 500ms ease-in 300ms, -webkit-transform 500ms ease;
   overflow: hidden;
   position: relative;
+  top: 150px;
 }
 
 .container .projects .project:hover {
@@ -235,5 +312,205 @@ body {
   transition: -webkit-transform 500ms ease 200ms;
   transition: transform 500ms ease 200ms;
   transition: transform 500ms ease 200ms, -webkit-transform 500ms ease 200ms;
+}
+
+.container .projects .project1 {
+  width: 500px;
+  height: 400px;
+  margin-left: 100px;
+  background-color: dodgerblue;
+  border-radius: 7px;
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transform: rotate3d(0, 0, 0, 0);
+          transform: rotate3d(0, 0, 0, 0);
+  -webkit-box-shadow: 5px 5px 20px #aaa;
+          box-shadow: 5px 5px 20px #aaa;
+  -webkit-transition: top 500ms ease-in 400ms, -webkit-transform 500ms ease;
+  transition: top 500ms ease-in 400ms, -webkit-transform 500ms ease;
+  transition: transform 500ms ease, top 500ms ease-in 400ms;
+  transition: transform 500ms ease, top 500ms ease-in 400ms, -webkit-transform 500ms ease;
+  overflow: hidden;
+  position: relative;
+  top: 300px;
+}
+
+.container .projects .project1:hover {
+  -webkit-transform: rotate3d(2, -1, -1, -0.2turn);
+          transform: rotate3d(2, -1, -1, -0.2turn);
+}
+
+.container .projects .project1:hover > .cover {
+  -webkit-transform: rotate3d(0, 1, 0.5, 3.142rad);
+          transform: rotate3d(0, 1, 0.5, 3.142rad);
+}
+
+.container .projects .project1 .cover {
+  width: 100%;
+  height: 100%;
+  background-image: url(./example.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transform: rotate3d(0 0 0 0);
+          transform: rotate3d(0 0 0 0);
+  -webkit-transition: -webkit-transform 500ms ease 200ms;
+  transition: -webkit-transform 500ms ease 200ms;
+  transition: transform 500ms ease 200ms;
+  transition: transform 500ms ease 200ms, -webkit-transform 500ms ease 200ms;
+}
+
+.container .testimonials {
+  width: 100%;
+  height: 500px;
+  background-color: #0f155e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.container .testimonials .message {
+  width: 600px;
+  cursor: pointer;
+  height: 400px;
+  background-color: #1c073d;
+  border-radius: 7px;
+  -webkit-animation: none;
+          animation: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.container .testimonials .message img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: -100%;
+}
+
+.container .testimonials .message .cover {
+  width: 0px;
+  -webkit-transform: translate(30px);
+          transform: translate(30px);
+  height: 100%;
+  position: absolute;
+  background-color: #f8f7f4;
+}
+
+@-webkit-keyframes animate {
+  from {
+    background-color: white;
+  }
+  to {
+    background-color: #52a8da;
+  }
+}
+
+@keyframes animate {
+  from {
+    background-color: white;
+  }
+  to {
+    background-color: #52a8da;
+  }
+}
+
+@-webkit-keyframes message {
+  from {
+    -webkit-transform: translate(0) scale(1);
+            transform: translate(0) scale(1);
+  }
+  to {
+    -webkit-transform: translate(-70px) scale(1.1);
+            transform: translate(-70px) scale(1.1);
+  }
+}
+
+@keyframes message {
+  from {
+    -webkit-transform: translate(0) scale(1);
+            transform: translate(0) scale(1);
+  }
+  to {
+    -webkit-transform: translate(-70px) scale(1.1);
+            transform: translate(-70px) scale(1.1);
+  }
+}
+
+@-webkit-keyframes cover {
+  0% {
+    width: 0;
+    -webkit-transform: translate(100px);
+            transform: translate(100px);
+  }
+  25% {
+    width: 20px;
+  }
+  50% {
+    width: 30px;
+  }
+  51% {
+    width: 150px;
+  }
+  52% {
+    width: 200px;
+    -webkit-transform: translate(350px);
+            transform: translate(350px);
+  }
+  100% {
+    width: 0px;
+    -webkit-transform: translate(750px);
+            transform: translate(750px);
+  }
+}
+
+@keyframes cover {
+  0% {
+    width: 0;
+    -webkit-transform: translate(100px);
+            transform: translate(100px);
+  }
+  25% {
+    width: 20px;
+  }
+  50% {
+    width: 30px;
+  }
+  51% {
+    width: 150px;
+  }
+  52% {
+    width: 200px;
+    -webkit-transform: translate(350px);
+            transform: translate(350px);
+  }
+  100% {
+    width: 0px;
+    -webkit-transform: translate(750px);
+            transform: translate(750px);
+  }
+}
+
+@-webkit-keyframes image {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes image {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
