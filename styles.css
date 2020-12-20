@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
@@ -8,6 +9,8 @@ body {
   width: 100%;
   height: 100vh;
   background: #fbfcfd;
+  max-width: 1400px;
+  margin: auto;
 }
 
 .container nav {
@@ -29,6 +32,7 @@ body {
 .container nav img {
   width: 50px;
   height: 50px;
+  cursor: pointer;
 }
 
 .container nav ul {
@@ -67,11 +71,169 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   outline: none;
-  background-color: #1ebfff;
+  background-color: #1db3ee;
   color: white;
   font-weight: bolder;
-  font-size: medium;
+  font-size: small;
   border-radius: 10px;
   cursor: pointer;
+  -webkit-transition: background-color .3s ease;
+  transition: background-color .3s ease;
+}
+
+.container nav button:hover {
+  background-color: #bbe8fa;
+}
+
+.container section {
+  width: 100%;
+  height: 500px;
+  background-color: #fbfcfd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.container section .my-intro {
+  width: 400px;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: xx-large;
+}
+
+.container section .my-intro h1 {
+  font-family: "Varela Round", sans-serif;
+}
+
+.container section .description {
+  width: 400px;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container section .description p {
+  font-size: medium;
+  color: #555;
+  font-weight: bold;
+}
+
+.container .heading {
+  background-color: #ecf1fc;
+  width: 100%;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .heading img {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+}
+
+.container .heading h1 {
+  text-align: center;
+  font-size: x-large;
+  color: black;
+  font-weight: bold;
+}
+
+.container .skills {
+  width: 100%;
+  background-color: #ecf1fc;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.container .skills .circle {
+  width: 170px;
+  height: 170px;
+  position: absolute;
+  left: -270px;
+}
+
+.container .projects {
+  width: 100%;
+  height: 600px;
+  background-color: #fdfdff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.container .projects h3 {
+  font-size: large;
+}
+
+.container .projects .project {
+  width: 500px;
+  height: 400px;
+  background-color: dodgerblue;
+  border-radius: 7px;
+  cursor: pointer;
+  -webkit-transform: rotate3d(0, 0, 0, 0);
+          transform: rotate3d(0, 0, 0, 0);
+  -webkit-box-shadow: 5px 5px 20px #aaa;
+          box-shadow: 5px 5px 20px #aaa;
+  -webkit-transition: -webkit-transform 500ms ease;
+  transition: -webkit-transform 500ms ease;
+  transition: transform 500ms ease;
+  transition: transform 500ms ease, -webkit-transform 500ms ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.container .projects .project:hover {
+  -webkit-transform: rotate3d(2, -1, -1, -0.2turn);
+          transform: rotate3d(2, -1, -1, -0.2turn);
+}
+
+.container .projects .project:hover > .cover {
+  -webkit-transform: rotate3d(0, 1, 0.5, 3.142rad);
+          transform: rotate3d(0, 1, 0.5, 3.142rad);
+}
+
+.container .projects .project .cover {
+  width: 100%;
+  height: 100%;
+  background-image: url(./example.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transform: rotate3d(0 0 0 0);
+          transform: rotate3d(0 0 0 0);
+  -webkit-transition: -webkit-transform 500ms ease 200ms;
+  transition: -webkit-transform 500ms ease 200ms;
+  transition: transform 500ms ease 200ms;
+  transition: transform 500ms ease 200ms, -webkit-transform 500ms ease 200ms;
 }
 /*# sourceMappingURL=styles.css.map */
