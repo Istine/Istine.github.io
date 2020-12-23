@@ -2,13 +2,29 @@ const slideInOnScroll = () => {
     const container = document.querySelector(".container")
     const scrollHeight = document.querySelector(".skills").scrollHeight
     window.addEventListener("scroll", (e) => {
-        if(window.scrollY > 180) {
+        if (window.scrollY > 180) {
             let children = [...document.querySelector(".skills").children]
             let delay = 100
             children.forEach(child => {
-                    child.style.cssText = `transition: left 500ms ease-in-out ${delay}ms;left:${delay}px;`
-                    delay += 250
+                child.style.cssText = `transition: left 500ms ease-in-out ${delay}ms;left:${delay}px;`
+                delay += 250
             })
+        }
+
+        if (window.scrollY >= 1400) {
+            const remarks = document.querySelector(".testimonials")
+            const message = document.querySelector(".message")
+            const cover = document.querySelector("#slider")
+            const image = document.querySelector("#client_msg")
+            const heading = document.querySelector(".testimonials h1")
+            const role = document.querySelector(".testimonials h3")
+            const button = document.querySelector(".testimonials button")
+                message.style.cssText = "animation: message 1s ease 300ms forwards;"
+                heading.style.cssText = `animation:name 500ms ease 100ms forwards;`;
+                role.style.cssText = `animation:role 400ms ease 200ms forwards;`;
+                button.style.cssText = `animation:button 400ms ease 300ms forwards;`;
+                cover.style.cssText = "animation:cover 1s ease 100ms forwards"
+                image.style.cssText = "animation:image 1s ease  forwards"
         }
     })
 
@@ -37,15 +53,21 @@ const slideInOnScroll = () => {
         prev.style.cssText = "animation: none;"
     })
 
-    const remarks = document.querySelector(".testimonials")
-    const message = document.querySelector(".message")
-    const cover = document.querySelector("#slider")
-    const image = document.querySelector("#client_msg")
-    remarks.addEventListener("click", (e) => {
-        message.style.cssText = "animation: message 1s ease forwards;"
-        cover.style.cssText = "animation:cover 1s ease 100ms forwards"
-        image.style.cssText = "animation:image 1s ease  forwards"
-    })
+    // const remarks = document.querySelector(".testimonials")
+    // const message = document.querySelector(".message")
+    // const cover = document.querySelector("#slider")
+    // const image = document.querySelector("#client_msg")
+    // const heading = document.querySelector(".testimonials h1")
+    // const role = document.querySelector(".testimonials h3")
+    // const button = document.querySelector(".testimonials button")
+    // remarks.addEventListener("click", (e) => {
+    //     message.style.cssText = "animation: message 1s ease 300ms forwards;"
+    //     heading.style.cssText = `animation:name 800ms ease 100ms forwards;`;
+    //     role.style.cssText = `animation:role 700ms ease 200ms forwards;`;
+    //     button.style.cssText = `animation:button 700ms ease 300ms forwards;`;
+    //     cover.style.cssText = "animation:cover 1s ease 100ms forwards"
+    //     image.style.cssText = "animation:image 1s ease  forwards"
+    // })
 
 }
 slideInOnScroll()

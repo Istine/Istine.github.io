@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 //https://sebostudio.com/about/
 //https://kuon.space/#top
-$background_color:#fbfcfd;
+$background_color: #fbfcfd;
 
 body {
     margin: 0;
@@ -66,11 +66,11 @@ body {
             font-size: small;
             border-radius: 10px;
             cursor: pointer;
-            transition: background-color .3s ease;
+            transition: background-color 0.3s ease;
 
             &:hover {
                 background-color: rgb(187, 232, 250);
-           }
+            }
         }
     }
 
@@ -81,6 +81,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-around;
+        overflow-x: hidden;
 
         .my-intro {
             width: 400px;
@@ -136,6 +137,7 @@ body {
         justify-content: space-around;
         align-items: center;
         position: relative;
+        overflow-x: hidden;
 
         .circle {
             width: 100px;
@@ -144,7 +146,6 @@ body {
             left: -270px;
         }
     }
-
     .projects {
         width: 100%;
         height: 600px;
@@ -198,7 +199,7 @@ body {
                 height: 20px;
             }
         }
-        #project_name{
+        #project_name {
             font-size: x-large;
             position: relative;
             top: 250px;
@@ -222,7 +223,7 @@ body {
             border-radius: 7px;
             cursor: pointer;
             box-sizing: border-box;
-            transform:rotate3d(0, 0, 0, 0);
+            transform: rotate3d(0, 0, 0, 0);
             box-shadow: 5px 5px 20px #aaa;
             transition: transform 500ms ease, top 500ms ease-in 300ms;
             overflow: hidden;
@@ -256,7 +257,7 @@ body {
             border-radius: 7px;
             cursor: pointer;
             box-sizing: border-box;
-            transform:rotate3d(0, 0, 0, 0);
+            transform: rotate3d(0, 0, 0, 0);
             box-shadow: 5px 5px 20px #aaa;
             transition: transform 500ms ease, top 500ms ease-in 400ms;
             overflow: hidden;
@@ -284,21 +285,74 @@ body {
     }
 
     .testimonials {
-        width: 100%;
-        height: 500px;
-        background-color: rgb(15, 21, 94);
+        width: 95%;
+        border-top-right-radius: 35px;
+        height: 600px;
+        background-color: rgb(18, 26, 49);
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: flex-end;
+        position: relative;
+        overflow: hidden;
+
+        h1 {
+            position: absolute;
+            margin: 0;
+            font-size: 40px;
+            text-transform: capitalize;
+            color: rgb(236, 229, 229);
+            left: -400px;
+            top: 100px;
+            opacity: 0;
+            z-index: 3;
+        }
+
+        h3 {
+            position: absolute;
+            margin: 0;
+            font-size: 20px;
+            text-transform: capitalize;
+            color: white;
+            left: -400px;
+            top: 150px;
+            opacity: 0;
+            z-index: 3;
+        }
+
+        button {
+            position: absolute;
+            width: 200px;
+            padding: 15px 10px;
+            border-radius: 30px;
+            outline: none;
+            left: -400px;
+            font-weight: bold;
+            top: 300px;
+            cursor: pointer;
+            color: white;
+            border: none;
+            background-color: rgb(248, 18, 95);
+            text-transform: capitalize;
+            font-size: large;
+            transform: translateY(0);
+            box-shadow: 0 0 7px #222;
+            transition: transform 400ms ease;
+
+            &:hover {
+                transform: translateY(-10px);
+            }
+        }
+
         .message {
             width: 600px;
             cursor: pointer;
             height: 400px;
-            background-color: rgb(28, 7, 61);
+            background-color: transparent;
             border-radius: 7px;
             animation: none;
             position: relative;
             overflow: hidden;
+            margin-right: 100px;
 
             img {
                 width: 100%;
@@ -312,14 +366,156 @@ body {
                 transform: translate(30px);
                 height: 100%;
                 position: absolute;
+                opacity: .8;
                 background-color: rgb(248, 247, 244);
+            }
+        }
+    }
+
+    footer {
+        width: 95%;
+        height: 400px;
+        border-top: .3px solid rgb(68, 68, 67);
+        background-color: rgb(18, 26, 49);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .firstBox {
+            display: flex;
+            flex-direction: column;
+            width: auto;
+            height: auto;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+
+            a {
+                box-sizing: border-box;
+                text-decoration: none;
+                img {
+                    width: 60px;
+                    height: 60px;
+                    margin: 10px;
+                }
+            }
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                li {
+                    color: rgb(204, 201, 201);
+                    font-family: "Poppins", sans-serif;
+                    cursor: pointer;
+                    transition: all 400ms ease;
+
+                    &:hover {
+                     text-decoration: underline;
+                    }
+                }
+            }
+
+            box-sizing: border-box;
+        }
+
+        .secondBox {
+            height: 230px;
+            display: flex;
+            align-items: center;
+            margin-top: 100px;
+            box-sizing: border-box;
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                li {
+                    cursor: pointer;
+                    color: rgb(204, 201, 201);
+                    margin-bottom: 10px;
+                    transition: all 400ms ease;
+
+                    &:hover {
+                     text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            
+            input{
+                margin: 10px 0;
+                padding: 10px;
+                text-transform: capitalize;
+                outline: none;
+                font-family: "Poppins", sans-serif;
+                font-size: small;
+                color: whitesmoke;
+                border: none;
+                background-color: rgb(30, 30, 65);
+            }
+            textarea {
+                margin: 10px 0;
+                height: 100px;
+                width: 250px;
+                padding: 10px;
+                outline: none;
+                font-size: small;
+                font-family: "Poppins", sans-serif;
+                color: rgb(221, 215, 215);
+                border: none;
+                background-color: rgb(30, 30, 65);
+            }
+
+            button {
+                width: 100%;
+                padding: 10px;
+                background-color: rgb(28, 56, 83);
+                outline: none;
+                border: none;
+                color: white;
+                cursor: pointer;
+                border-radius: 5px;
+                text-transform: capitalize;
+                transition: all 400ms ease;
+                position: relative;
+                z-index: 1;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgb(35, 68, 99);
+                    top: 0;
+                    left: 0;
+                    transform: scaleX(0);
+                    transform-origin: right;
+                    transition: transform 500ms ease-out;
+                    z-index: -1;
+                    border-radius: 5px;
+                }
+
+                &:hover::after {
+                    transform: scaleX(1);
+                    transform-origin: left;
+                }
+            }
+
+            h3 {
+                color: rgb(201, 199, 199);
+                text-align: center;
+                font-size: medium;
             }
         }
     }
 }
 
+//animations
 @keyframes animate {
-    from { 
+    from {
         background-color: white;
     }
 
@@ -329,7 +525,7 @@ body {
 }
 
 @keyframes message {
-    from{
+    from {
         transform: translate(0) scale(1);
     }
     to {
@@ -337,8 +533,42 @@ body {
     }
 }
 
+@keyframes name {
+    from {
+        opacity: 0;
+        left: -400px;
+    }
+
+    to {
+        opacity: 1;
+        left: 100px;
+    }
+}
+
+@keyframes role {
+    from {
+        opacity: 0;
+        left: -400px;
+    }
+
+    to {
+        opacity: 1;
+        left: 100px;
+        top: 200px;
+    }
+}
+
+@keyframes button {
+    from {
+        left: -400px;
+    }
+    to {
+        left: 100px;
+    }
+}
+
 @keyframes cover {
-    0%{
+    0% {
         width: 0;
         transform: translate(100px);
     }
@@ -350,7 +580,7 @@ body {
         width: 30px;
     }
 
-    51%{
+    51% {
         width: 150px;
     }
 
@@ -359,7 +589,7 @@ body {
         transform: translate(350px);
     }
 
-    100%{
+    100% {
         width: 0px;
         transform: translate(750px);
     }
@@ -373,6 +603,3 @@ body {
         left: 0;
     }
 }
-
-
-    
