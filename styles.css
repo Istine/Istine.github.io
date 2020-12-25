@@ -2,7 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 body {
   margin: 0;
+  padding: 0;
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 
 .container {
@@ -11,6 +13,25 @@ body {
   background: #fbfcfd;
   max-width: 1400px;
   margin: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    margin: 0;
+  }
+}
+
+.container .mobile-nav {
+  width: 100%;
+  display: none;
+  height: 60px;
+  background-color: dodgerblue;
+}
+
+@media screen and (max-width: 600px) {
+  .container .mobile-nav {
+    display: block;
+  }
 }
 
 .container nav {
@@ -27,6 +48,12 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  .container nav {
+    display: none;
+  }
 }
 
 .container nav img {
@@ -87,7 +114,7 @@ body {
 
 .container section {
   width: 100%;
-  height: 500px;
+  height: auto;
   background-color: #fbfcfd;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -100,6 +127,15 @@ body {
   overflow-x: hidden;
 }
 
+@media screen and (max-width: 600px) {
+  .container section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .container section .my-intro {
   width: 400px;
   padding: 10px;
@@ -108,15 +144,29 @@ body {
   font-size: xx-large;
 }
 
+@media screen and (max-width: 600px) {
+  .container section .my-intro {
+    font-size: small;
+    width: 290px;
+  }
+}
+
 .container section .my-intro h1 {
   font-family: "Varela Round", sans-serif;
 }
 
 .container section .description {
-  width: 400px;
+  width: auto;
   padding: 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+@media screen and (max-width: 600px) {
+  .container section .description {
+    font-size: small;
+    width: 270px;
+  }
 }
 
 .container section .description p {
@@ -155,6 +205,12 @@ body {
   font-weight: bold;
 }
 
+@media screen and (max-width: 600px) {
+  .container .heading h1 {
+    font-size: medium;
+  }
+}
+
 .container .skills {
   width: 100%;
   background-color: #ecf1fc;
@@ -169,6 +225,18 @@ body {
           align-items: center;
   position: relative;
   overflow-x: hidden;
+}
+
+@media screen and (max-width: 600px) {
+  .container .skills {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 
 .container .skills .circle {
